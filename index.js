@@ -2,8 +2,15 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 
+const cors = require('cors');
+
 const app = express();
+
+app.use(cors());
+
 const PORT = process.env.PORT || 3001;
+
+
 
 // Configura body-parser para manejar solicitudes JSON
 app.use(bodyParser.json());
